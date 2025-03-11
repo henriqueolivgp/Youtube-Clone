@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/navbar/navbar";
 
-import { Roboto } from 'next/font/google';
+import { Roboto } from "next/font/google";
+import { Sidebar } from "@/components/sidebar/sidebar";
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'], // Define os pesos que vais usar
-  style: ['normal', 'italic'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400", "700"], // Define os pesos que vais usar
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +26,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <Navbar />
-        
-        <section>{children}</section>
+        <Sidebar />
+        {children}
       </body>
     </html>
   );
