@@ -23,3 +23,12 @@ body {
   font-family: 'Roboto', sans-serif;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem */
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* Para IE e Edge */
+  scrollbar-width: none;      /* Para Firefox */
+}
